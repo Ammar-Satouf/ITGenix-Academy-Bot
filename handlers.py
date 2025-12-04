@@ -280,8 +280,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                             resources.get(year, {}).get(term, {}).get(section_key, {}).keys())
 
                 subjects_all_set = set(subjects_all)
-                prefix = "⚡ " if term == "الفصل الأول" else "🔥 "
-                subjects_with_emoji = [prefix + subj for subj in sorted(subjects_all_set)]
+                subjects_with_emoji = sorted(subjects_all_set)
+
 
                 await update.message.reply_text(
                     "📖 اختر المادة:",
@@ -305,8 +305,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         resources.get(year, {}).get(term, {}).get(section_key, {}).keys())
 
             subjects_all_set = set(subjects_all)
-            prefix = "⚡ " if term == "الفصل الأول" else "🔥 "
-            subjects_with_emoji = [prefix + subj for subj in sorted(subjects_all_set)]
+            subjects_with_emoji = sorted(subjects_all_set)
+
 
             await update.message.reply_text(
                 "📖 اختر المادة:",

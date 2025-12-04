@@ -1,0 +1,4 @@
+python-telegram-bot
+motor
+flask
+nest-asyncio
